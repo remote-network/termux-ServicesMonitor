@@ -1,0 +1,10 @@
+# Internos/volátiles de graphify (se regeneran solos). Versionamos solo los
+# artefactos útiles: graph.json, graph.html, GRAPH_REPORT.md
+cache/
+.graphify_analysis.json
+.graphify_labels.json
+.graphify_labels.json.sig
+.graphify_root
+manifest.json
+# Backups automáticos con fecha (YYYY-MM-DD/) que crea graphify
+????-??-??/

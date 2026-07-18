@@ -1,0 +1,15 @@
+#!/data/data/com.termux/files/usr/bin/sh
+# Ejemplo de script `run` para termux-services/runit.
+# Copiar a la carpeta del servicio y darle permisos de ejecución:
+#   mkdir -p $PREFIX/var/service/services-monitor/log
+#   cp run.example $PREFIX/var/service/services-monitor/run
+#   chmod +x $PREFIX/var/service/services-monitor/run
+#
+# Las credenciales se leen del .env del proyecto (no se ponen aquí).
+# `exec` es obligatorio: reemplaza el shell por Python para que runit
+# supervise el proceso real y pueda detenerlo con SIGTERM.
+
+set -e
+PROYECTO="$HOME/Desarrollos/termux/termux-ServicesMonitor"   # ajustar si difiere
+cd "$PROYECTO"
+exec python3 services_monitor.py

@@ -1,0 +1,14 @@
+# Credenciales locales (NUNCA versionar)
+.env
+
+# Estado en runtime del monitor (se regenera solo)
+services_status.json
+services_status.json.tmp
+services_status.json.corrupto
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

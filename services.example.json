@@ -1,0 +1,29 @@
+[
+    {
+        "nombre": "LocalConfigs",
+        "url": "http://127.0.0.1:8000",
+        "metodo": "GET",
+        "timeout": 10,
+        "codigos_validos": [200, 301, 302]
+    },
+    {
+        "nombre": "API salud",
+        "url": "https://ejemplo.test/health",
+        "metodo": "GET",
+        "timeout": 8,
+        "codigos_validos": [200],
+        "headers": { "User-Agent": "services-monitor", "Accept": "application/json" },
+        "contenido_esperado": "\"status\":\"ok\"",
+        "umbral_fallos": 3,
+        "umbral_exitos": 1,
+        "reintentos": 2,
+        "backoff_base": 1.0
+    },
+    {
+        "nombre": "Ping HEAD",
+        "url": "https://ejemplo.test/",
+        "metodo": "HEAD",
+        "timeout": 5,
+        "codigos_validos": [200, 204]
+    }
+]
